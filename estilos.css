@@ -1,0 +1,147 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav a {
+    color: #fff;
+    margin: 0 15px;
+    text-decoration: none;
+}
+
+main {
+    padding: 20px;
+}
+
+.course-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.course {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin: 10px;
+    overflow: hidden;
+    text-align: center;
+    width: 300px;
+}
+
+.course img {
+    width: 100%;
+    height: auto;
+}
+
+.course h3 {
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 10px;
+}
+
+.course p {
+    padding: 10px;
+}
+
+.course button {
+    background-color: #dc3545;
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px 0;
+    border-radius: 4px;
+    width: calc(100% - 20px);
+}
+
+.course button:hover {
+    background-color: #c82333;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 0% 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+.container {
+    width: 400px;
+    margin: 40px auto;
+    background-color:rgb(255, 255, 255);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(255, 6, 6, 0.1);
+}
+form {
+    display: flex;
+    flex-direction: column;
+}
+.form-group {
+    margin-bottom: 14px;
+}
+
+
+/*ESTILOS PARA PARRAFO PRINCIPAL*/
+.hero {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+.hero-image {
+    width: 100%;
+    height: auto;
+}
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+}
+.hero-text h2 {
+    margin: 0;
+}
+
+.btn {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+}
+/*ESTILOS PARA BENEFICIO*/
+.benefits, .testimonials, .call-to-action {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.benefit, .testimonial {
+    margin: 20px;
+}
+
+.benefit-image, .testimonial-image {
+    width: 25%;
+    height: auto;
+}
+.btn:hover {
+    background-color: #0056b3;
+}
+

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <header>
+        <h1>Carrito de Compras</h1>
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="sobrenosotros.html">Sobre Nosotros</a>
+            <a href="cursos.html">Cursos</a>
+            <a href="carrito.html">Carrito</a>
+            <a href="login.html">Iniciar Sesión</a>
+            <a href="registro.html">Registrarse</a>
+        </nav>
+    </header>
+    <main>
+        <h2>Tu Carrito</h2>
+        <div id="cart-container"></div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Cursos en Línea. Todos los derechos reservados.</p>
+    </footer>
+    <script src="index.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const cartContainer = document.getElementById('cart-container');
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+            if (cart.length === 0) {
+                cartContainer.innerHTML = '<p>Tu carrito está vacío.</p>';
+            } else {
+                cart.forEach((course, index) => {
+                    const courseElement = document.createElement('div');
+                    courseElement.classList.add('course');
+                    courseElement.innerHTML = `
+                        <h3>${course}</h3>
+                        <p>Descripción del curso: ${course}</p>
+                        <button onclick="removeFromCart(${index})">Eliminar</button>
+                    `;
+                    cartContainer.appendChild(courseElement);
+                });
+            }
+        });
+
+        function removeFromCart(index) {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            cart.splice(index, 1);
+            localStorage.setItem('cart', JSON.stringify(cart));
+            location.reload();
+        }
+    </script>
+</body>
+</html>
